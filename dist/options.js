@@ -98,7 +98,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/Grid/Grid.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/Typography/Typography.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/TextField/TextField.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/Button/Button.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/Switch/Switch.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/Button/Button.js");
 /* harmony import */ var _fontsource_roboto__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fontsource/roboto */ "./node_modules/@fontsource/roboto/index.css");
 /* harmony import */ var _options_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./options.css */ "./src/options/options.css");
 /* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utils/storage */ "./src/utils/storage.ts");
@@ -115,8 +116,10 @@ const Options = () => {
         (0,_utils_storage__WEBPACK_IMPORTED_MODULE_4__.getStoredOptions)().then(options => setOptions(options));
     }, []);
     const handleHomeCityChange = (homeCity) => {
-        console.log(homeCity);
         setOptions(Object.assign(Object.assign({}, options), { homeCity }));
+    };
+    const handleAutoOverlay = (hasAutoOverlay) => {
+        setOptions(Object.assign(Object.assign({}, options), { hasAutoOverlay }));
     };
     const handleSaveCity = () => {
         setFormState('saving');
@@ -139,7 +142,10 @@ const Options = () => {
                         react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], { variant: 'body1' }, "Home city name"),
                         react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], { fullWidth: true, placeholder: 'Enter a home city', value: options.homeCity, onChange: e => handleHomeCityChange(e.target.value), disabled: isFieldsDisabled })),
                     react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { item: true },
-                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { onClick: handleSaveCity, variant: 'contained', color: 'primary', disabled: isFieldsDisabled }, formState === 'ready' ? 'Save' : 'Saving...')))))));
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], { variant: 'body1' }, "Auto toggle overlay on webpage load"),
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], { color: 'primary', checked: options.hasAutoOverlay, onChange: (event, checked) => handleAutoOverlay(checked), disabled: isFieldsDisabled })),
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { item: true },
+                        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_12__["default"], { onClick: handleSaveCity, variant: 'contained', color: 'primary', disabled: isFieldsDisabled }, formState === 'ready' ? 'Save' : 'Saving...')))))));
 };
 const rootEL = document.createElement('div');
 document.body.appendChild(rootEL);
@@ -412,7 +418,7 @@ const getStoredOptions = () => {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_mui_material_esm_Box_Box_js-node_modules_mui_material_esm_Button_Button_-cd6a2b","vendors-node_modules_mui_material_esm_TextField_TextField_js"], () => (__webpack_require__("./src/options/options.tsx")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_mui_material_esm_Box_Box_js-node_modules_mui_material_esm_Button_Button_-cd6a2b","vendors-node_modules_mui_material_esm_Switch_Switch_js-node_modules_mui_material_esm_TextFiel-5d05ad"], () => (__webpack_require__("./src/options/options.tsx")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

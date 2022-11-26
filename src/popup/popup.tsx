@@ -7,8 +7,9 @@ import Grid from '@mui/material/Grid'
 import InputBase from '@mui/material/InputBase'
 import IconButton from '@mui/material/IconButton'
 import AddIcon from '@mui/icons-material/Add'
+import PictureInPictureIcon from '@mui/icons-material/PictureInPicture'
 import './popup.css'
-import WeatherCard from './weatherCard'
+import WeatherCard from '../components/weatherCard'
 import {
 	setStoredCities,
 	setStoredOptions,
@@ -16,6 +17,7 @@ import {
 	getStoredOptions,
 	LocalStorageOptions,
 } from '../utils/storage'
+import { Messages } from '../utils/messages'
 
 const App: React.FC<{}> = () => {
 	const [cities, setCities] = useState<string[]>([])
@@ -49,10 +51,23 @@ const App: React.FC<{}> = () => {
 			...options,
 			tempScale: options.tempScale === 'metric' ? 'imperial' : 'metric',
 		}
-		console.log(updateOptions)
 		setStoredOptions(updateOptions).then(() => {
 			setOptions(updateOptions)
 		})
+	}
+
+	const handleOverlay = () => {
+		chrome.tabs.query(
+			{
+				active: true,
+				currentWindow: true,
+			},
+			tabs => {
+				if (tabs.length > 0) {
+					chrome.tabs.sendMessage(tabs[0].id, Messages.TOGGLE_OVERLAY)
+				}
+			},
+		)
 	}
 
 	if (!options) return null
@@ -72,8 +87,17 @@ const App: React.FC<{}> = () => {
 				</Grid>
 				<Grid item>
 					<Paper>
-						<Box>
+						<Box py='14px'>
 							<IconButton onClick={handleTempScale}>{options.tempScale === 'metric' ? '\u2103' : '\u2109'}</IconButton>
+						</Box>
+					</Paper>
+				</Grid>
+				<Grid item>
+					<Paper>
+						<Box py='14px'>
+							<IconButton onClick={handleOverlay}>
+								<PictureInPictureIcon />
+							</IconButton>
 						</Box>
 					</Paper>
 				</Grid>

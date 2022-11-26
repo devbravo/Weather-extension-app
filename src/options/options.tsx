@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ReactDOM from 'react-dom/client'
-import { Grid, Box, Card, CardContent, TextField, Typography, Button } from '@mui/material'
+import { Grid, Box, Card, Switch, CardContent, TextField, Typography, Button } from '@mui/material'
 import '@fontsource/roboto'
 import './options.css'
 import { getStoredOptions, LocalStorageOptions, setStoredOptions } from '../utils/storage'
@@ -16,8 +16,11 @@ const Options: React.FC<{}> = () => {
 	}, [])
 
 	const handleHomeCityChange = (homeCity: string) => {
-		console.log(homeCity)
 		setOptions({ ...options, homeCity })
+	}
+
+	const handleAutoOverlay = (hasAutoOverlay: boolean) => {
+		setOptions({ ...options, hasAutoOverlay })
 	}
 
 	const handleSaveCity = () => {
@@ -48,6 +51,15 @@ const Options: React.FC<{}> = () => {
 								placeholder='Enter a home city'
 								value={options.homeCity}
 								onChange={e => handleHomeCityChange(e.target.value)}
+								disabled={isFieldsDisabled}
+							/>
+						</Grid>
+						<Grid item>
+							<Typography variant='body1'>Auto toggle overlay on webpage load</Typography>
+							<Switch
+								color='primary'
+								checked={options.hasAutoOverlay}
+								onChange={(event, checked) => handleAutoOverlay(checked)}
 								disabled={isFieldsDisabled}
 							/>
 						</Grid>
