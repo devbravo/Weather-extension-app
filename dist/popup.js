@@ -138,7 +138,6 @@ const App = () => {
             setCities(updatedCities);
         });
     };
-    console.log('options', options);
     const handleTempScale = () => {
         const updateOptions = Object.assign(Object.assign({}, options), { tempScale: options.tempScale === 'metric' ? 'imperial' : 'metric' });
         console.log(updateOptions);
@@ -542,7 +541,7 @@ const getStoredOptions = () => {
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_mui_material_esm_Box_Box_js-node_modules_mui_material_esm_Card_Card_js-n-298f99","vendors-node_modules_mui_icons-material_Add_js-node_modules_mui_material_esm_Button_Button_js-9f4e80"], () => (__webpack_require__("./src/popup/popup.tsx")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_mui_material_esm_Box_Box_js-node_modules_mui_material_esm_Button_Button_-cd6a2b","vendors-node_modules_mui_icons-material_Add_js-node_modules_mui_material_esm_CardActions_Card-ef1e56"], () => (__webpack_require__("./src/popup/popup.tsx")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

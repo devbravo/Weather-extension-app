@@ -44,8 +44,6 @@ const App: React.FC<{}> = () => {
 		})
 	}
 
-	console.log('options', options)
-
 	const handleTempScale = () => {
 		const updateOptions: LocalStorageOptions = {
 			...options,
