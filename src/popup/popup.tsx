@@ -87,14 +87,14 @@ const App: React.FC<{}> = () => {
 				</Grid>
 				<Grid item>
 					<Paper>
-						<Box py='14px'>
+						<Box>
 							<IconButton onClick={handleTempScale}>{options.tempScale === 'metric' ? '\u2103' : '\u2109'}</IconButton>
 						</Box>
 					</Paper>
 				</Grid>
 				<Grid item>
 					<Paper>
-						<Box py='14px'>
+						<Box>
 							<IconButton onClick={handleOverlay}>
 								<PictureInPictureIcon />
 							</IconButton>

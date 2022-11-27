@@ -2,9 +2,9 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/weatherCard/WeatherCard.css":
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/weatherCard/weatherCard.css":
 /*!******************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/weatherCard/WeatherCard.css ***!
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/weatherCard/weatherCard.css ***!
   \******************************************************************************************/
 /***/ ((module, __webpack_exports__, __webpack_require__) => {
 
@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".weatherCard-title {\n\tfont-size: 24px !important;\n}\n\n.weatherCard-body {\n\tfont-size: 16px !important;\n\ttext-align: center !important;\n}\n\n.weatherCard-temp {\n\tfont-size: 46px !important;\n\ttext-align: center !important;\n}\n\n.weatherCard-icon {\n\twidth: 100px !important;\n\theight: 100px !important;\n}\n", "",{"version":3,"sources":["webpack://./src/components/weatherCard/weatherCard.css"],"names":[],"mappings":"AAAA;CACC,0BAA0B;AAC3B;;AAEA;CACC,0BAA0B;CAC1B,6BAA6B;AAC9B;;AAEA;CACC,0BAA0B;CAC1B,6BAA6B;AAC9B;;AAEA;CACC,uBAAuB;CACvB,wBAAwB;AACzB","sourcesContent":[".weatherCard-title {\n\tfont-size: 24px !important;\n}\n\n.weatherCard-body {\n\tfont-size: 16px !important;\n\ttext-align: center !important;\n}\n\n.weatherCard-temp {\n\tfont-size: 46px !important;\n\ttext-align: center !important;\n}\n\n.weatherCard-icon {\n\twidth: 100px !important;\n\theight: 100px !important;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -47,16 +47,16 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n\twidth: 360px;\n\theight: 512px;\n\tbackground-color: #f5f5f5;\n\tfont-family: 'Roboto';\n}\n\nimg {\n\twidth: 400px;\n\theight: 400px;\n}\n", "",{"version":3,"sources":["webpack://./src/popup/popup.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ,aAAa;CACb,yBAAyB;CACzB,qBAAqB;AACtB;;AAEA;CACC,YAAY;CACZ,aAAa;AACd","sourcesContent":["body {\n\twidth: 360px;\n\theight: 512px;\n\tbackground-color: #f5f5f5;\n\tfont-family: 'Roboto';\n}\n\nimg {\n\twidth: 400px;\n\theight: 400px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n\twidth: 460px;\n\theight: 512px;\n\tbackground-color: #f5f5f5;\n\tfont-family: 'Roboto';\n}\n\nimg {\n\twidth: 400px;\n\theight: 400px;\n}\n", "",{"version":3,"sources":["webpack://./src/popup/popup.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ,aAAa;CACb,yBAAyB;CACzB,qBAAqB;AACtB;;AAEA;CACC,YAAY;CACZ,aAAa;AACd","sourcesContent":["body {\n\twidth: 460px;\n\theight: 512px;\n\tbackground-color: #f5f5f5;\n\tfont-family: 'Roboto';\n}\n\nimg {\n\twidth: 400px;\n\theight: 400px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
 /***/ }),
 
-/***/ "./src/components/weatherCard/WeatherCard.css":
+/***/ "./src/components/weatherCard/weatherCard.css":
 /*!****************************************************!*\
-  !*** ./src/components/weatherCard/WeatherCard.css ***!
+  !*** ./src/components/weatherCard/weatherCard.css ***!
   \****************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -76,7 +76,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_WeatherCard_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./WeatherCard.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/weatherCard/WeatherCard.css");
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_weatherCard_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./weatherCard.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/weatherCard/weatherCard.css");
 
       
       
@@ -98,12 +98,12 @@ options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWi
 options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
 options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_WeatherCard_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_weatherCard_css__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
 
-       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_WeatherCard_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_WeatherCard_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_WeatherCard_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_weatherCard_css__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_weatherCard_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_weatherCard_css__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
 
 
 /***/ }),
@@ -197,8 +197,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/CardActions/CardActions.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/Button/Button.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/esm/Grid/Grid.js");
 /* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../utils/api */ "./src/utils/api.ts");
-/* harmony import */ var _WeatherCard_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./WeatherCard.css */ "./src/components/weatherCard/WeatherCard.css");
+/* harmony import */ var _weatherCard_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./weatherCard.css */ "./src/components/weatherCard/weatherCard.css");
 
 
 
@@ -227,11 +228,16 @@ const WeatherCard = ({ city, tempScale, onDelete, }) => {
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { className: 'weatherCard-body' }, cardState == 'loading' ? 'Loading...' : 'Error: could not retrieve weather data for this city.')));
     }
     return (react__WEBPACK_IMPORTED_MODULE_0___default().createElement(WeatherCardContainer, { onDelete: onDelete },
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { className: 'weatherCard-title' }, weatherData.name),
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { className: 'body1' }, Math.round(weatherData.main.temp)),
-        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { className: 'weatherCard-body' },
-            "Feels like: ",
-            Math.round(weatherData.main.feels_like))));
+        react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], { container: true, justifyContent: 'space-around' },
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], { item: true },
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { className: 'weatherCard-title' }, weatherData.name),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { className: 'weatherCard-temp' }, Math.round(weatherData.main.temp)),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { className: 'weatherCard-body' },
+                    "Feels like: ",
+                    Math.round(weatherData.main.feels_like))),
+            react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], { item: true }, weatherData.weather.length > 0 && (react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null,
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement("img", { className: 'weatherCard-icon', src: (0,_utils_api__WEBPACK_IMPORTED_MODULE_1__.getWeatherIconSrc)(weatherData.weather[0].icon) }),
+                react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], { className: 'weatherCard-body' }, weatherData.weather[0].main)))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (WeatherCard);
 
@@ -326,11 +332,11 @@ const App = () => {
                             react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_Add__WEBPACK_IMPORTED_MODULE_12__["default"], null))))),
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Grid__WEBPACK_IMPORTED_MODULE_8__["default"], { item: true },
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Paper__WEBPACK_IMPORTED_MODULE_9__["default"], null,
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Box__WEBPACK_IMPORTED_MODULE_7__["default"], { py: '14px' },
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Box__WEBPACK_IMPORTED_MODULE_7__["default"], null,
                         react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_11__["default"], { onClick: handleTempScale }, options.tempScale === 'metric' ? '\u2103' : '\u2109')))),
             react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Grid__WEBPACK_IMPORTED_MODULE_8__["default"], { item: true },
                 react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Paper__WEBPACK_IMPORTED_MODULE_9__["default"], null,
-                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Box__WEBPACK_IMPORTED_MODULE_7__["default"], { py: '14px' },
+                    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_Box__WEBPACK_IMPORTED_MODULE_7__["default"], null,
                         react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_11__["default"], { onClick: handleOverlay },
                             react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_mui_icons_material_PictureInPicture__WEBPACK_IMPORTED_MODULE_13__["default"], null)))))),
         options.homeCity != '' && react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_weatherCard__WEBPACK_IMPORTED_MODULE_4__["default"], { city: options.homeCity, tempScale: options.tempScale }),
@@ -356,7 +362,8 @@ root.render(react__WEBPACK_IMPORTED_MODULE_0___default().createElement(App, null
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "fetchOpenWeatherData": () => (/* binding */ fetchOpenWeatherData)
+/* harmony export */   "fetchOpenWeatherData": () => (/* binding */ fetchOpenWeatherData),
+/* harmony export */   "getWeatherIconSrc": () => (/* binding */ getWeatherIconSrc)
 /* harmony export */ });
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -376,6 +383,9 @@ const fetchOpenWeatherData = (city, tempScale) => __awaiter(void 0, void 0, void
     const data = yield res.json();
     return data;
 });
+const getWeatherIconSrc = (iconCode) => {
+    return `https://openweathermap.org/img/wn/${iconCode}@2x.png`;
+};
 
 
 /***/ }),
